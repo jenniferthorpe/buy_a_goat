@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<!-- saved from url=(0153)https://www.virtusize.com/integration/v3/util-iframe.html?origin=https%3A%2F%2Fwww.nudiejeans.com&vs.bid=t9hpPnPE1lX9r60m9YW4vVa.jty3d18m&_=1554107302539 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="dns-prefetch" href="https://cdn.api.virtusize.com/">
+    <title>Virtusize Widget Utility iFrame</title>
+</head>
+<body>
+
+<script src="./jquery.min.js"></script>
+
+
+<script>
+    var origin = "https://www.nudiejeans.com",
+        cookiesDisabled = document.cookie.indexOf("virtusize.cookies_enabled=1") === -1,
+        cookieDomain = "virtusize.com" === "None" ? null : "virtusize.com",
+        bidKey = "virtusize.bid",
+        bid = "t9hpPnPE1lX9r60m9YW4vVa.jty3d18m",
+        firstPartyBid = "True" === "True",
+        widgetType = "desktop";
+
+    $(function() {
+        Utils.setupReceiveMessage();
+        Utils.createOrUpdateLocalStorageBid();
+        Utils.postEnvironmentCheck();
+    });
+
+    Utils = (function(utils) {
+        var w = window;
+
+        utils.createOrUpdateLocalStorageBid = function() {
+            if(utils.hasLocalStorage() === true) {
+                var lsBid = localStorage.getItem(bidKey);
+
+                if(lsBid && lsBid != bid && firstPartyBid) {
+                    bid = lsBid;
+                    utils.writeCookie(bidKey, bid, {domain: cookieDomain, expires: 730});
+                } else {
+                    localStorage.setItem(bidKey, bid);
+                }
+            }
+        };
+
+        utils.postEnvironmentCheck = function() {
+            var event = {
+                name: "util-checked-environment",
+                data: {
+                    cookiesDisabled: cookiesDisabled,
+                    bid: bid,
+                    widgetType: widgetType,
+                    visited: {}
+                }
+            };
+
+            utils.postFactory(JSON.stringify(event))();
+        };
+
+        utils.postFactory = function (data) {
+            return function(){
+                parent.postMessage(data, w.origin);
+            }
+        };
+
+        utils.setupReceiveMessage = function() {
+            $(window).bind('message', function(e) {
+                e = e.originalEvent;
+
+                if(e.origin !== w.origin) {return false;}
+
+                if(typeof e.data !== 'undefined' && e.data !== null && e.data) { 
+                    try {
+                        utils.receiveEvent(JSON.parse(e.data));
+                    } catch(err) {
+                        // Silently ignoring, since it could be an IE7 or some other
+                        // non-modern Browser and we want to show an error message
+                    }
+                }
+            });
+        };
+
+        utils.receiveEvent = function(event) {
+            switch(event.name) {
+                case "integration-called-backend":
+                    $.ajax(utils.formatEventAjaxParams(event));
+                    break;
+                case "integration-reset-bid":
+                    if(utils.hasLocalStorage() === true) {
+                        localStorage.removeItem(bidKey);
+                    }
+                    utils.writeCookie(bidKey, '', {domain: cookieDomain, expires: -1});
+                    utils.writeCookie(bidKey, '', {domain: '.virtusize.com', expires: -1});
+                    utils.writeCookie(bidKey, '', {domain: '.virtusize.jp', expires: -1});
+                    utils.writeCookie(bidKey, '', {domain: '.virtusize.kr', expires: -1});
+                    $.ajax(utils.formatEventAjaxParams(event));
+
+                    break;
+            }
+        };
+
+        utils.formatEventAjaxParams = function(event) {
+            return {
+                url: event.url,
+                dataType: "text",
+                contentType: event.contentType,
+                type: event.type,
+                data: utils.formatEventData(event),
+                headers: {'X-VS-Bid': bid},
+                success: function(response) {
+                    utils.postFactory(response)();
+                }
+            };
+        };
+
+        utils.formatEventData = function(event) {
+            return event.contentType == 'application/json' ? JSON.stringify(event.data) : event.data;
+        };
+
+        // From https://github.com/Modernizr/Modernizr/blob/master/feature-detects/storage/localstorage.js
+        utils.hasLocalStorage = function() {
+            var test = 'vsLocalStorageTest';
+            try {
+                localStorage.setItem(test, test);
+                localStorage.removeItem(test);
+                return true;
+            } catch(e) {
+                return false;
+            }
+        };
+
+        utils.writeCookie = function(key, value, options) {
+            if (value !== undefined && !$.isFunction(value)) {
+                options = $.extend({expires: 1, path: '/'}, options);
+
+                if (typeof options.expires === 'number') {
+                    var days = options.expires, t = options.expires = new Date();
+                    t.setDate(t.getDate() + days);
+                }
+
+                return (document.cookie = [
+                            encodeURIComponent(key), '=', String(value),
+                            options.expires ? '; expires=' + options.expires.toUTCString() : '', // use expires attribute, max-age is not supported by IE
+                            options.path    ? '; path=' + options.path : '',
+                            options.domain  ? '; domain=' + options.domain : '',
+                            options.secure  ? '; secure' : ''
+                        ].join(''));
+            }
+
+            return null;
+        };
+        
+        return utils;
+    })({});
+</script>
+
+</body></html>
