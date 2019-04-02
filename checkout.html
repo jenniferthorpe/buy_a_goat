@@ -13,6 +13,8 @@
 
     <!-- Bootstrap core CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="checkout.css">
 
     <!-- Custom styles for this template -->
     <link href="form-validation.css" rel="stylesheet">
@@ -37,24 +39,12 @@
             <li class="list-group-item d-flex justify-content-between lh-condensed">
               <div>
                 <h6 class="my-0">Produkt namn</h6>
-                <small class="text-muted">Produktbeskrivning</small>
+                <input type="number" min="0" name="" id="product-amount">
+                <a class="close fa fa-trash" href="#" id="trashcan"></a>
               </div>
               <span class="text-muted">12:-</span>
             </li>
-            <li class="list-group-item d-flex justify-content-between lh-condensed">
-              <div>
-                <h6 class="my-0">Produkt namn</h6>
-                <small class="text-muted">Brief description</small>
-              </div>
-              <span class="text-muted">8:-</span>
-            </li>
-            <li class="list-group-item d-flex justify-content-between lh-condensed">
-              <div>
-                <h6 class="my-0">Produkt namn</h6>
-                <small class="text-muted">Produktbeskrivning</small>
-              </div>
-              <span class="text-muted">5:-</span>
-            </li>
+            
             <li class="list-group-item d-flex justify-content-between bg-light">
               <div class="text-success">
                 <h6 class="my-0">Rabattkod</h6>
@@ -98,19 +88,6 @@
             </div>
 
             <div class="mb-3">
-              <label for="username">Användarnamn</label>
-              <div class="input-group">
-                <div class="input-group-prepend">
-                  <span class="input-group-text">@</span>
-                </div>
-                <input type="text" class="form-control" id="username" placeholder="Användarnamn" required>
-                <div class="invalid-feedback" style="width: 100%;">
-                  Ditt användarnamn krävs.
-                </div>
-              </div>
-            </div>
-
-            <div class="mb-3">
               <label for="email">Email <span class="text-muted"></span></label>
               <input type="email" class="form-control" id="email" placeholder="love4goat.hotmail.com">
               <div class="invalid-feedback">
@@ -120,7 +97,7 @@
 
             <div class="mb-3">
               <label for="address">Address</label>
-              <input type="text" class="form-control" id="address" placeholder="Långvretsvägen 72a" required>
+              <input type="text" class="form-control" id="address" placeholder="Postadress" required>
               <div class="invalid-feedback">
                 Vänligen skriv in korrekt adress.
               </div>
@@ -144,17 +121,13 @@
               </div>
               <div class="col-md-4 mb-3">
                 <label for="state">Stad</label>
-                <select class="custom-select d-block w-100" id="state" required>
-                  <option value="">Välj...</option>
-                  <option>Sverige</option>
-                  <option>USA</option>
-                </select>
+                <input type="text" class="form-control" id="state" required>
                 <div class="invalid-feedback">
                   Please provide a valid state.
                 </div>
               </div>
               <div class="col-md-3 mb-3">
-                <label for="zip">Postkod</label>
+                <label for="zip">Postnummer</label>
                 <input type="text" class="form-control" id="zip" placeholder="" required>
                 <div class="invalid-feedback">
                   Postkod krävs.
@@ -174,55 +147,10 @@
 
             <h4 class="mb-3">Betalning</h4>
 
-            <div class="d-block my-3">
-              <div class="custom-control custom-radio">
-                <input id="credit" name="paymentMethod" type="radio" class="custom-control-input" checked required>
-                <label class="custom-control-label" for="credit">Kreditkort</label>
-              </div>
-              <div class="custom-control custom-radio">
-                <input id="debit" name="paymentMethod" type="radio" class="custom-control-input" required>
-                <label class="custom-control-label" for="debit">Kontokort</label>
-              </div>
-              <div class="custom-control custom-radio">
-                <input id="paypal" name="paymentMethod" type="radio" class="custom-control-input" required>
-                <label class="custom-control-label" for="paypal">Paypal</label>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-6 mb-3">
-                <label for="cc-name">Kortinnehavarens namn</label>
-                <input type="text" class="form-control" id="cc-name" placeholder="" required>
-                <small class="text-muted"></small>
-                <div class="invalid-feedback">
-                  Namn på kortinnehavare krävs.
-                </div>
-              </div>
-              <div class="col-md-6 mb-3">
-                <label for="cc-number">Kort-nr</label>
-                <input type="text" class="form-control" id="cc-number" placeholder="" required>
-                <div class="invalid-feedback">
-                  Kortnr krävs.
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-3 mb-3">
-                <label for="cc-expiration">Utgångsdatum</label>
-                <input type="text" class="form-control" id="cc-expiration" placeholder="" required>
-                <div class="invalid-feedback">
-                  Utgångsdatum krävs.
-                </div>
-              </div>
-              <div class="col-md-3 mb-3">
-                <label for="cc-expiration">CVV</label>
-                <input type="text" class="form-control" id="cc-cvv" placeholder="" required>
-                <div class="invalid-feedback">
-                  CVV kod
-                </div>
-              </div>
-            </div>
+            <div>En faktura kommer att skickas till din mailadress.</div>
+            
             <hr class="mb-4">
-            <button class="btn btn-primary btn-lg btn-block" type="submit">Fortsätt till kassan</button>
+            <button class="btn btn-primary btn-lg btn-block" type="submit">Slutför köp</button>
           </form>
         </div>
       </div>
@@ -245,27 +173,6 @@
     <script src="../../assets/js/vendor/popper.min.js"></script>
     <script src="../../dist/js/bootstrap.min.js"></script>
     <script src="../../assets/js/vendor/holder.min.js"></script>
-    <script>
-      // Example starter JavaScript for disabling form submissions if there are invalid fields
-      (function() {
-        'use strict';
-
-        window.addEventListener('load', function() {
-          // Fetch all the forms we want to apply custom Bootstrap validation styles to
-          var forms = document.getElementsByClassName('needs-validation');
-
-          // Loop over them and prevent submission
-          var validation = Array.prototype.filter.call(forms, function(form) {
-            form.addEventListener('submit', function(event) {
-              if (form.checkValidity() === false) {
-                event.preventDefault();
-                event.stopPropagation();
-              }
-              form.classList.add('was-validated');
-            }, false);
-          });
-        }, false);
-      })();
-    </script>
+    <script src="checkout.js"></script>
   </body>
 </html>
