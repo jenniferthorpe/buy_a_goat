@@ -14,7 +14,7 @@ html{
 
 body{
   background:#f8f1e5;
-  margin: 30px 50px;
+  margin: 0px;
   line-height: 1.4;
   height: 100%;
 }
@@ -188,21 +188,6 @@ footer{
 .card button:hover {
   opacity: 0.7;
 }
-
-/* 
-.col-xs-offset-3{
-  margin-left: 0%;
-}
-
-.input-group-btn>.btn, .form-control, .form.control:active {
-  height: 43px;
-  margin-bottom: 20px;
-  font-size: 18px;
-}
-
-.btn {
-  box-shadow: none;
-} */
 
 input[type=number]::-webkit-inner-spin-button, 
 input[type=number]::-webkit-outer-spin-button {  
