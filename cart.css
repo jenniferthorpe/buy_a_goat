@@ -106,6 +106,12 @@ grid-template-columns: repeat(3, 1fr);
    box-shadow: var(--shadow);
 }
 
+.img-crop{
+  width: 300px;
+  height: 250px;
+  overflow: hidden;
+}
+
 /*Info */
 
 .info{
@@ -181,6 +187,31 @@ footer{
 
 .card button:hover {
   opacity: 0.7;
+}
+
+/* 
+.col-xs-offset-3{
+  margin-left: 0%;
+}
+
+.input-group-btn>.btn, .form-control, .form.control:active {
+  height: 43px;
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+.btn {
+  box-shadow: none;
+} */
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button {  
+
+   opacity: 1;
+}
+
+.quantity {
+  margin-bottom: 20px;
 }
 
 

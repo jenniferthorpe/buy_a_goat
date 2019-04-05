@@ -1,0 +1,81 @@
+{
+    "goat1" : {
+        "id": 1,
+        "title": "Ricky Martin",
+        "description": "blablabla",
+        "image": "./images/image1.jpg",
+        "price": 179
+    },
+
+    "goat2" : {
+        "id": 2,
+        "title": "Dolly Parton",
+        "description": "blablabla",
+        "image": "./images/image10.jpg",
+        "price": 199
+    },
+
+    "goat3" : {
+        "id": 3,
+        "title": "Elvis",
+        "description": "blablabla",
+        "image": "./images/image3.jpg",
+        "price": 99
+    },
+
+    "goat4" : {
+        "id": 4,
+        "title": "Johnny Cash",
+        "description": "blablabla",
+        "image": "./images/image4.jpg",
+        "price": 139
+    },
+
+    "goat5" : {
+        "id": 5,
+        "title": "June Carter",
+        "description": "blablabla",
+        "image": "./images/image5.jpg",
+        "price": 199
+    },
+
+    "goat6" : {
+        "id": 6,
+        "title": "Britney",
+        "description": "blablabla",
+        "image": "./images/image6.jpg",
+        "price": 79
+    },
+
+    "goat7" : {
+        "id": 7,
+        "title": "GW",
+        "description": "blablabla",
+        "image": "./images/image7.jpg",
+        "price": 59
+    },
+
+    "goat8" : {
+        "id": 8,
+        "title": "Babben",
+        "description": "blablabla",
+        "image": "./images/image8.jpg",
+        "price": 139
+    },
+
+    "goat9" : {
+        "id": 9,
+        "title": "Whitney Huston",
+        "description": "blablabla",
+        "image": "./images/image9.jpg",
+        "price": 119
+    },
+
+    "goat10" : {
+        "id": 10,
+        "title": "Justin Timberlake",
+        "description": "blablabla",
+        "image": "./images/image2.jpg",
+        "price": 189
+    }
+}
