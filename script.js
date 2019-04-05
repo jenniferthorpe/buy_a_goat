@@ -12,7 +12,7 @@ $(function () {
     
     //sparar info om val get i localStorage
       $("#" + goat.id + " .addToCart").click(function () {
-        let cart = [goat.id, goat.price, quantity]
+        let cart = [goat.title, goat.price, quantity]
         localStorage.setItem(goat.id, JSON.stringify(cart));
       });
 
