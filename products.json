@@ -2,7 +2,7 @@
     "goat1" : {
         "id": 1,
         "title": "Ricky Martin",
-        "description": "blablabla",
+        "description": "Rask och rivig personlighet, kan ha kort stubin men lugnas lätt av latinamerikanska toner och av att få glassa i solen. Ricky är väldigt social och älskar att dansa mer än sina ekologiska morötter och golvar sin omgivning med sitt charmiga leende.",
         "image": "./images/image1.jpg",
         "price": 179
     },
@@ -10,7 +10,7 @@
     "goat2" : {
         "id": 2,
         "title": "Dolly Parton",
-        "description": "blablabla",
+        "description": "Dolly har ett enormt självförtroende som lätt smittar av sig, hon är snäll och glad men är inte sen med att sätta ner hoven vid konflikter. Hon älskar countrymusik och är inte den som tackar nej till en pilsner eller två på terrassen vid solnedgång.",
         "image": "./images/image10.jpg",
         "price": 199
     },
@@ -18,7 +18,7 @@
     "goat3" : {
         "id": 3,
         "title": "Elvis",
-        "description": "blablabla",
+        "description": "Elvis är en otroligt karismatisk get med mycket stjärnstatus – en get som har det helt enkelt! Med förkärlek till Las Vegas är det inte sällan man hittar Elvis spelandes vid pokerborden. Utöver ett nalkande spelberoende älskar Elvis rock n roll och stora smörgåsar med majonnäs.",
         "image": "./images/image3.jpg",
         "price": 99
     },
@@ -26,7 +26,7 @@
     "goat4" : {
         "id": 4,
         "title": "Johnny Cash",
-        "description": "blablabla",
+        "description": "Johnny är Elvis mer blygsamme bror som trots sin försiktiga uppsyn har hunnit vara med om en hel del livserfarenheter vilket gör honom till en utmärkt lyssnare och kompanjon. Efter att han avsuttit sin tid på Folsom Prison har han fokuserat helt på ett nyktert och lugnt liv.",
         "image": "./images/image4.jpg",
         "price": 139
     },
@@ -34,7 +34,7 @@
     "goat5" : {
         "id": 5,
         "title": "June Carter",
-        "description": "blablabla",
+        "description": "June är en riktig tänkare och är väldigt uppskattad av sin omgivning för sin klokhet. Hon kan upplevas som ganska bestämd men rättvis och bryr sig väldigt mycket om sina nära. Lyckas man charma June har man garanterat en vän för livet. June är en klippa ",
         "image": "./images/image5.jpg",
         "price": 199
     },
@@ -42,7 +42,7 @@
     "goat6" : {
         "id": 6,
         "title": "Britney",
-        "description": "blablabla",
+        "description": "Britney är en get med en mycket komplex personlighet och passar den äventyrliga. Vare sig det gäller ett meltdown med frisyrbyte eller deltagande i en popshow så är ingen dag sig lik i hennes sällskap. Hon trivs bra i sällskap med andra djur, speciellt ormar.",
         "image": "./images/image6.jpg",
         "price": 79
     },
@@ -50,7 +50,7 @@
     "goat7" : {
         "id": 7,
         "title": "GW",
-        "description": "blablabla",
+        "description": "GW är gammal i gamet men har långt ifrån kastat in handduken. Han är vresig men snäll och är inte den som spottar i glaset. Bli inte uppskrämda av hans flås – ni vänjer er. GW älskar mordpoddar och att ta en bit mat på Tennstopet med goda vänner.",
         "image": "./images/image7.jpg",
         "price": 59
     },
@@ -58,7 +58,7 @@
     "goat8" : {
         "id": 8,
         "title": "Babben",
-        "description": "blablabla",
+        "description": "En varm och folkkär get med otroligt mycket humor. Babben är en kaxig böna med skarp blick och är gärna med och munhuggs bara stämningen är god. Babben hjärta slår hårt för solidaritet och jämställdhet och är en perfekt kompanjon för den akademiska getsamlaren.",
         "image": "./images/image8.jpg",
         "price": 139
     },
@@ -66,7 +66,7 @@
     "goat9" : {
         "id": 9,
         "title": "Whitney Huston",
-        "description": "blablabla",
+        "description": "Whitney är en speciell get med mycket lager i personligheten. Hon kan uppfattas som blyg och försiktig till en början men bakom den lugna fasaden gömmer sig en stor talang och artist. Whitney är en känslosam varelse som ofta tvingat folk till tårar med sin vackra klagosång.",
         "image": "./images/image9.jpg",
         "price": 119
     },
@@ -74,7 +74,7 @@
     "goat10" : {
         "id": 10,
         "title": "Justin Timberlake",
-        "description": "blablabla",
+        "description": "Justin är en äkta entertainer och älskar att stå i centrum. Det bästa han vet är att glida ut på clubben och dansa loss i sin fedora. Han är social och charmig och man blir lätt bländad av hans karisma. Notis: Justin och Britney får under inga förutsättningar under samma tak.",
         "image": "./images/image2.jpg",
         "price": 189
     }
