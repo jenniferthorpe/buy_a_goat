@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Checkout example for Bootstrap</title>
+    <title>Checkout</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/checkout/">
 
@@ -33,7 +33,7 @@
         <div class="col-md-4 order-md-2 mb-4">
           <h4 class="d-flex justify-content-between align-items-center mb-3">
             <span class="text-muted">Din varukorg</span>
-            <span class="badge badge-secondary badge-pill">Töm varukorg</span>
+            <button class="btn btn-info btn-rounded" id="clear-cart">Töm varukorg</button>
           </h4>
           <ul class="list-group mb-3" id="cart">
           
@@ -180,6 +180,12 @@
             <strong>${totalSum} :-</strong>
         </li>`)
       
+        // Clear cart
+        $("#clear-cart").click(function(){
+          localStorage.clear();
+          $("#cart").children("li").remove();
+        })
+
     })
     </script>
   </body>

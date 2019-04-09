@@ -1,6 +1,6 @@
 (function() {
 
-    // Validering för alla required-fält (Validerar att det är fler än 2 tecken och att de inte består enbart av siffror)
+    // Validering för alla fält med class validation1 (Validerar att det är fler än 2 tecken och att de inte består enbart av siffror)
     $(".validation1").keyup(function() {
         if ($(this).val().length <= 2 || $.isNumeric($(this).val())){
             $(this).siblings(".invalid-feedback").show();
