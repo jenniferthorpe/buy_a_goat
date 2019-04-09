@@ -112,7 +112,9 @@
             <div>En faktura kommer att skickas till din mailadress.</div>
             
             <hr class="mb-4">
-            <button class="btn btn-primary btn-lg btn-block" type="submit">Slutför köp</button>
+            <a href="./confirmation.html" class="btn btn-primary btn-lg btn-block">Slutför köp</a>
+              
+            </button>
           </form>
         </div>
       </div>
@@ -131,62 +133,12 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
-    <script src="../../assets/js/vendor/popper.min.js"></script>
-    <script src="../../dist/js/bootstrap.min.js"></script>
-    <script src="../../assets/js/vendor/holder.min.js"></script>
     <script src="checkout.js"></script>
+    <script src="checkout2.js"></script>
     <script src="validate.js"></script>
-    <script src="script.js"></script>
 
     <script>
     
-    $(function(){
-
-      let totalSum = 0;
-
-      for (let i = 0; i < localStorage.length; i++) {
-        let key = localStorage.key(i);
-      
-        let getKey = JSON.parse(window.localStorage.getItem(key));
-        let sum = getKey["1"] * getKey["2"];
-        totalSum += sum;
-        
-        if(key > 0){
-          $("#cart").append(
-          `
-          <li class="list-group-item d-flex justify-content-between lh-condensed">
-              <div>
-                <h6 class="my-0" id="product-name">${getKey["0"]}</h6>
-                <h6 class="my-0" id="product-price">${getKey["1"]} :- styck</h6>
-                <input type="number" min="0" name="" class="quantity" value = ${getKey["2"]}>
-                <a class="close fa fa-trash" href="#" id="trashcan"></a>
-              </div>
-              <span class="text-muted">${sum} :-</span>
-            </li>
-          `)
-        
-        }
-        $("#product-amount").change(function(){
-        let quantity =  $("#product-amount").val();
-        let lsUpdate = [getKey["0"], getKey["1"], quantity];
-        localStorage.setItem(getKey, JSON.stringify(lsUpdate));
-        })
-      }
-      
-      $("#cart").append(
-      `<li class="list-group-item d-flex justify-content-between">
-            <span>Total summa kr. </span>
-            <strong>${totalSum} :-</strong>
-        </li>`)
-      
-        // Clear cart
-        $("#clear-cart").click(function(){
-          localStorage.clear();
-          $("#cart").children("li").remove();
-        })
-
-    })
     </script>
   </body>
 </html>
