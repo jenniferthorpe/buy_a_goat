@@ -13,3 +13,11 @@ input[type=number]::-webkit-outer-spin-button {
 
    opacity: 1;
 }
+
+#backbtn {
+    margin: 15px;
+}
+
+#backbtn > a{
+    color: white;
+}
