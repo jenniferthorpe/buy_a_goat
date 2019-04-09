@@ -200,6 +200,30 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 
+.mb-5, .my-5 {
+  margin-bottom: 0px !important;
+}
+
+.cartPreview {
+  width: 20%;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  text-align: left;
+}
+
+.varukorgen {
+  display: inline-block;
+  width: 50%;
+}
+
+.cartLink {
+  
+  display: inline-block;
+  text-align: right;
+}
+
+
 /*Media queries*/
 @media(max-widht:700px){
    .top-container{

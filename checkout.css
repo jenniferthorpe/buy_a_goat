@@ -21,3 +21,7 @@ input[type=number]::-webkit-outer-spin-button {
 #backbtn > a{
     color: white;
 }
+
+.badge:hover {
+    cursor: pointer;
+}
