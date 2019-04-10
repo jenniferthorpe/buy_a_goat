@@ -14,7 +14,7 @@ $(function(){
       `
       <li class="list-group-item d-flex justify-content-between lh-condensed">
         <div>
-         <img src="${getKey["4"]}">
+         <img src="${getKey["4"]}"><br>
          <h4 class="my-0" id="product-name">${getKey["0"]}</h4>
          <h6 class="my-0" id="product-price"> ${getKey["1"]} :- styck</h6>
          <h6 class="my-0" id="product-price">Antal: ${getKey["2"]}</h6>
